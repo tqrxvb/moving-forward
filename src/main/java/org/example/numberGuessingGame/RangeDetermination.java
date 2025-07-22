@@ -10,8 +10,8 @@ public class RangeDetermination {
     private int max;
 
     public RangeDetermination(
-            int max,
-            int min
+            int min,
+            int max
     ) {
         if (min >= max) {
             throw new IllegalArgumentException
@@ -30,12 +30,21 @@ public class RangeDetermination {
     }
 
     public void shiftUpperLimit(int newMax) {
+        if (newMax <= min) {
+            throw new IllegalArgumentException(
+                    "new max must be greater than current min");
+        }
         this.max = newMax;
         log.info("The upper limit is now {}", this.max);
     }
 
     public void shiftLowerLimit(int newMin) {
+        if (newMin >= max) {
+            throw new IllegalArgumentException(
+                    "new min must be smaller than current max");
+        }
         this.min = newMin;
         log.info("The lower limit is now {}", this.min);
     }
+
 }

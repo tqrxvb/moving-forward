@@ -14,7 +14,7 @@ public class NumberGuessingGame {
     public void numberGuessingGame(){
 
         int expectedNumber = generateExpectedNumber();
-        RangeDetermination range = new RangeDetermination(HIGH_END, LOW_END);
+        RangeDetermination range = new RangeDetermination(LOW_END, HIGH_END);
 
         log.info("We are looking for a number between {} and {}", LOW_END, HIGH_END);
         log.info("It is actually number {}", expectedNumber);
