@@ -47,7 +47,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.5.1</version>
                 <configuration>
-                    <mainClass>org.example.numberGuessingGame.Main</mainClass>
+                    <mainClass>org.example.binarySearch.numberGuessingGame.Main</mainClass>
                 </configuration>
             </plugin>
 

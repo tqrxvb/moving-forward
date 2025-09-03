@@ -1,5 +1,6 @@
-package org.example.numberGuessingGame;
+package org.example.binarySearch.numberGuessingGame;
 
+import org.example.binarySearch.numberGuessingGame.RangeDetermination;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

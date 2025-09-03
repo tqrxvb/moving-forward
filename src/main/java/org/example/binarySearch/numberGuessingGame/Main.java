@@ -1,4 +1,4 @@
-package org.example.numberGuessingGame;
+package org.example.binarySearch.numberGuessingGame;
 
 public class Main {
 
