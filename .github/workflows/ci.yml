@@ -9,7 +9,8 @@ on:
       - main   # runs for direct main push
 
 jobs:
-  unit-tests:
+#  unit-tests:
+  build-and-test:
     name: Run Unit Tests
     runs-on: ubuntu-latest
 

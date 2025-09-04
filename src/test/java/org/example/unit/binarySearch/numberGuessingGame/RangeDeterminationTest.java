@@ -12,7 +12,7 @@ public class RangeDeterminationTest {
     @Test
     void shouldCreateObjectWithCorrectMinAndMax() {
 
-        int expectedMin = 1;
+        int expectedMin = 11;
         int expectedMax = 2;
 
         var range = new RangeDetermination(
