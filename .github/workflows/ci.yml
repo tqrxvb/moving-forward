@@ -38,6 +38,7 @@ jobs:
       - name: Run Unit Tests
         run: mvn -B test -Dgroups=unit # -B = "Batch mode" - to run non-interactively (no prompts, no progress bars).
         env:
+          # Fallback to GitHub secret if run not locally
           MY_NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
 #  api-tests:
 #    name: Run API Tests

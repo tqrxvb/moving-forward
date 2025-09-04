@@ -80,7 +80,7 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <!-- Reads maven-secrets.properties locally -->
                 <artifactId>properties-maven-plugin</artifactId>
-                <version>1.2.0</version>
+                <version>1.5.0</version>
                 <executions>
                     <execution>
                         <phase>initialize</phase>
