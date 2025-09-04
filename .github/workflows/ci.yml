@@ -38,7 +38,7 @@ jobs:
       - name: Run Unit Tests
         run: mvn -B test -Dgroups=unit # -B = "Batch mode" - to run non-interactively (no prompts, no progress bars).
         env:
-          NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
+          MY_NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
 #  api-tests:
 #    name: Run API Tests
 #    runs-on: ubuntu-latest
