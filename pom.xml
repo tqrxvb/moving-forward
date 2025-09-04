@@ -92,21 +92,21 @@
                                 <file>maven-secrets.properties</file>
                             </files>
                             <!-- Skip if file does not exist (important for GitHub Actions) -->
-                            <skipMissingFiles>true</skipMissingFiles>
+<!--                            <skipMissingFiles>true</skipMissingFiles>-->
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
 
-           <plugin>
-                <groupId>com.example</groupId>
-                <artifactId>example-plugin</artifactId>
-                <version>1.0.0</version>
-                <configuration>
-                    <!-- Use local property if present, otherwise use environment variable -->
-                    <nvdApiKey>${my.nvdApiKey:${env.MY_NVD_API_KEY}}</nvdApiKey>
-                </configuration>
-            </plugin>
+<!--           <plugin>-->
+<!--                <groupId>com.example</groupId>-->
+<!--                <artifactId>example-plugin</artifactId>-->
+<!--                <version>1.0.0</version>-->
+<!--                <configuration>-->
+<!--                    &lt;!&ndash; Use local property if present, otherwise use environment variable &ndash;&gt;-->
+<!--                    <nvdApiKey>${my.nvdApiKey:${env.MY_NVD_API_KEY}}</nvdApiKey>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
         </plugins>
     </build>
 
