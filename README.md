@@ -23,6 +23,7 @@ I want to put here unit, api and e2e tests and some CI.
 - JUnit 5
 - Playwright
 - Selenium
+- Github CI
 - SLF4J + Logback
 
 ## ⚡ Getting Started
