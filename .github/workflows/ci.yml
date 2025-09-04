@@ -36,7 +36,7 @@ jobs:
 
       # Step 4: Run only unit tests
       - name: Run Unit Tests
-        run: mvn -B test -Dgroups=unit # -B = "Batch mode" - to run non-interactively (no prompts, no progress bars).
+        run: mvn -B test -Dgroups=unit -Dmy.nvdApiKey=$MY_NVD_API_KEY # -B = "Batch mode" - to run non-interactively (no prompts, no progress bars).
 
 #  api-tests:
 #    name: Run API Tests
