@@ -1,8 +1,12 @@
 # Moving forward
 
-## 🚀List of features to include:
+## 😎 TL;DR
+My little project to practice a few little things.
+I want to put here unit, api and e2e tests and some CI.
+
+## 🚀 List of features to include:
 - Unit tests
-    - :white_check_mark: using JUnit5
+    - ✅ using JUnit5
     - using mocks
 - API tests
     - using mocks
