@@ -58,6 +58,26 @@
                 </configuration>
             </plugin>
 
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>properties-maven-plugin</artifactId>
+                <version>1.2.1</version>
+                <executions>
+                    <execution>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>read-project-properties</goal>
+                        </goals>
+                        <configuration>
+                            <files>
+                                <file>${basedir}/my.properties</file>
+                            </files>
+                            <quiet>true</quiet> <!-- ignore if file is missing -->
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
             <!-- Scans project dependencies for known security vulnerabilities -->
             <plugin>
                 <groupId>org.owasp</groupId>
@@ -75,34 +95,6 @@
                 </executions>
             </plugin>
 
-            <!-- Loads and sets properties in Maven -->
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>properties-maven-plugin</artifactId>
-                <version>1.2.0</version>
-                <executions>
-                    <execution>
-                        <phase>initialize</phase>
-                        <goals>
-                            <goal>read-project-properties</goal>
-                        </goals>
-                        <configuration>
-                            <files>
-                                <file>maven-secrets.properties</file>
-                            </files>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-
-           <plugin>
-                <groupId>com.example</groupId>
-                <artifactId>example-plugin</artifactId>
-                <version>1.0.0</version>
-                <configuration>
-                    <nvdApiKey>${my.nvdApiKey}</nvdApiKey>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
 
