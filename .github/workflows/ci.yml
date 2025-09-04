@@ -41,6 +41,7 @@ jobs:
         env:
           # Fallback to GitHub secret if run not locally
           MY_NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
+
 #  api-tests:
 #    name: Run API Tests
 #    runs-on: ubuntu-latest
