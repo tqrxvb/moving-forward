@@ -1,10 +1,12 @@
-package org.example.binarySearch.numberGuessingGame;
+package org.example.unit.binarySearch.numberGuessingGame;
 
 import org.example.binarySearch.numberGuessingGame.RangeDetermination;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@Tag("unit")
 public class RangeDeterminationTest {
 
     @Test
