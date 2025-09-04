@@ -58,6 +58,26 @@
                 </configuration>
             </plugin>
 
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>properties-maven-plugin</artifactId>
+                <version>1.2.1</version>
+                <executions>
+                    <execution>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>read-project-properties</goal>
+                        </goals>
+                        <configuration>
+                            <files>
+                                <file>${basedir}/my.properties</file>
+                            </files>
+                            <quiet>true</quiet> <!-- ignore if file is missing -->
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
             <!-- Scans project dependencies for known security vulnerabilities -->
             <plugin>
                 <groupId>org.owasp</groupId>
@@ -75,59 +95,6 @@
                 </executions>
             </plugin>
 
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>properties-maven-plugin</artifactId>
-                <version>1.2.1</version>
-                <executions>
-                    <execution>
-                        <phase>initialize</phase>
-                        <goals>
-                            <goal>read-project-properties</goal>
-                        </goals>
-                        <configuration>
-                            <files>
-                                <file>${basedir}/my.properties</file>
-                            </files>
-                            <quiet>true</quiet> <!-- nie wypluwa błędu jeśli plik nie istnieje -->
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-
-
-            <!--            &lt;!&ndash; Loads and sets properties in Maven &ndash;&gt;-->
-<!--            <plugin>-->
-<!--                <groupId>org.codehaus.mojo</groupId>-->
-<!--                &lt;!&ndash; Reads maven-secrets.properties locally &ndash;&gt;-->
-<!--                <artifactId>properties-maven-plugin</artifactId>-->
-<!--                <version>1.2.1</version>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <phase>initialize</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>read-project-properties</goal>-->
-<!--                        </goals>-->
-<!--                        <configuration>-->
-<!--                            <files>-->
-<!--                                <file>maven-secrets.properties</file>-->
-<!--                            </files>-->
-<!--                            &lt;!&ndash; Skip if file does not exist (important for GitHub Actions) &ndash;&gt;-->
-<!--&lt;!&ndash;                            <skipMissingFiles>true</skipMissingFiles>&ndash;&gt;-->
-<!--                        </configuration>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
-
-<!--           <plugin>-->
-<!--                <groupId>com.example</groupId>-->
-<!--                <artifactId>example-plugin</artifactId>-->
-<!--                <version>1.0.0</version>-->
-<!--                <configuration>-->
-<!--                    &lt;!&ndash; Use local property if present, otherwise use environment variable &ndash;&gt;-->
-<!--                    <nvdApiKey>${my.nvdApiKey:${env.MY_NVD_API_KEY}}</nvdApiKey>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
         </plugins>
     </build>
 
