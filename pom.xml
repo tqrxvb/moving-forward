@@ -75,10 +75,8 @@
                 </executions>
             </plugin>
 
-            <!-- Loads and sets properties in Maven -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
-                <!-- Reads maven-secrets.properties locally -->
                 <artifactId>properties-maven-plugin</artifactId>
                 <version>1.2.1</version>
                 <executions>
@@ -89,14 +87,37 @@
                         </goals>
                         <configuration>
                             <files>
-                                <file>maven-secrets.properties</file>
+                                <file>${basedir}/my.properties</file>
                             </files>
-                            <!-- Skip if file does not exist (important for GitHub Actions) -->
-<!--                            <skipMissingFiles>true</skipMissingFiles>-->
+                            <quiet>true</quiet> <!-- nie wypluwa błędu jeśli plik nie istnieje -->
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
+
+
+            <!--            &lt;!&ndash; Loads and sets properties in Maven &ndash;&gt;-->
+<!--            <plugin>-->
+<!--                <groupId>org.codehaus.mojo</groupId>-->
+<!--                &lt;!&ndash; Reads maven-secrets.properties locally &ndash;&gt;-->
+<!--                <artifactId>properties-maven-plugin</artifactId>-->
+<!--                <version>1.2.1</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <phase>initialize</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>read-project-properties</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <files>-->
+<!--                                <file>maven-secrets.properties</file>-->
+<!--                            </files>-->
+<!--                            &lt;!&ndash; Skip if file does not exist (important for GitHub Actions) &ndash;&gt;-->
+<!--&lt;!&ndash;                            <skipMissingFiles>true</skipMissingFiles>&ndash;&gt;-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
 
 <!--           <plugin>-->
 <!--                <groupId>com.example</groupId>-->
