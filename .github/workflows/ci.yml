@@ -3,10 +3,10 @@ name: pipeline
 on:
   pull_request:
     branches:
-      - master   # runs for master pull request
+      - main   # runs for main pull request
   push:
     branches:
-      - master   # runs for direct master push
+      - main   # runs for direct main push
 
 jobs:
   unit-tests:
